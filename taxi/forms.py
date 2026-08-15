@@ -19,7 +19,7 @@ class DriverCreationForm(UserCreationForm):
                                      validators=[validate_license_number], )
 
     class Meta(UserCreationForm.Meta):
-        model = Driver
+        model = get_user_model()
         fields = UserCreationForm.Meta.fields + ("license_number",)
 
 
